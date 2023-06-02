@@ -22,6 +22,7 @@ class HomeVC: UIViewController {
     public var coordinator: HomeCoordinator?
     private let disposable = DisposeBag()
     private let reachability: Reachability! = try? Reachability()
+    private let activity = ActivityIndicator()
     private let homeVM = HomeVM()
 
     // MARK: - View lifecycle-
@@ -50,6 +51,22 @@ extension HomeVC {
         reachability?.rx.isReachable
             .subscribe(onNext: { [weak self] isReachable in
                 isReachable ? self?.fetchDataFromApi() : ToastView.shared.short(self?.view, txt_msg: "Please check your internet!")
+            })
+            .disposed(by: disposable)
+        
+        homeVM
+            .loading
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] isLoading in
+                isLoading ? self?.activity.showLoading(view: self?.view) : self?.activity.hideLoading()
+            })
+            .disposed(by: disposable)
+        
+        homeVM
+            .error
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] error in
+                ToastView.shared.short(self?.view, txt_msg: "  \(error)  ")
             })
             .disposed(by: disposable)
         

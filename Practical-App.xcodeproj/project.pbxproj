@@ -44,6 +44,7 @@
 		EFE791F62A23E7AE004E4CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE791F52A23E7AE004E4CA5 /* Assets.xcassets */; };
 		EFE791F92A23E7AE004E4CA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE791F72A23E7AE004E4CA5 /* LaunchScreen.storyboard */; };
 		EFFF521D2A2A1E4C00D7BEC9 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF521C2A2A1E4C00D7BEC9 /* AppImages.swift */; };
+		EFFF52242A2A2CA400D7BEC9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF52232A2A2CA400D7BEC9 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		EFE791F82A23E7AE004E4CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFE791FA2A23E7AE004E4CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFFF521C2A2A1E4C00D7BEC9 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
+		EFFF52232A2A2CA400D7BEC9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		EFD8F4882A28AC6600EF96CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EFFF52232A2A2CA400D7BEC9 /* ActivityIndicator.swift */,
 				EFD8F4852A28AC5800EF96CD /* ToastView */,
 			);
 			path = Views;
@@ -484,6 +487,7 @@
 				EFE3CC4F2A249C9900A06703 /* HomeVM.swift in Sources */,
 				EFE3CC5E2A24C58F00A06703 /* BannerCVCell.swift in Sources */,
 				EFE791ED2A23E7AD004E4CA5 /* AppDelegate.swift in Sources */,
+				EFFF52242A2A2CA400D7BEC9 /* ActivityIndicator.swift in Sources */,
 				EFCCCC422A2A102E00CCF873 /* ImageViewCustomCorner.swift in Sources */,
 				EFE791EF2A23E7AD004E4CA5 /* SceneDelegate.swift in Sources */,
 				EF1A12E22A29187F005BD922 /* CornerCurvedView.swift in Sources */,
