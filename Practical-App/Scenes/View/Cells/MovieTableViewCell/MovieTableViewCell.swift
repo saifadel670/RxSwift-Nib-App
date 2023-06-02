@@ -24,7 +24,7 @@ class MovieTableViewCell: UITableViewCell {
     
     var eachCell:MovieCellModel! {
         didSet {
-            guard let url = eachCell?.coverUrl else {
+            guard let url = eachCell?.imageUrl else {
                 return
             }
             
