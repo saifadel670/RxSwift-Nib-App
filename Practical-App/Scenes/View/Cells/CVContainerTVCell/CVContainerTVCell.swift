@@ -17,7 +17,7 @@ class CVContainerTVCell: UITableViewCell {
     
     //MARK: - Local Storage-
     
-    private let homeVM = CollectionViewVM()
+    private let viewModel = CollectionViewVM()
     private let disposable = DisposeBag()
     
     // MARK: - Cell lifecycle-
@@ -34,7 +34,7 @@ class CVContainerTVCell: UITableViewCell {
 
 extension CVContainerTVCell {
     private func setupBindings() {
-        homeVM
+        viewModel
             .itemList
             .observeOn(MainScheduler.instance)
             .bind(to: collectionView.rx.items(cellIdentifier: BannerCVCell.cellIdentifier, cellType: BannerCVCell.self)) {  (row,vm,cell) in
@@ -62,6 +62,6 @@ extension CVContainerTVCell {
     }
     
     public func setViewModelData(_ models: [MovieCellModel]) {
-        homeVM.setData(models)
+        viewModel.setData(models)
     }
 }
